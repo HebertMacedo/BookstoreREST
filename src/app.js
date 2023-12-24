@@ -29,16 +29,7 @@ app.get("/", (req, res) => {
     res.status(200).send("Curso de Node.Js");
 });
 
-// Rota para obter a lista de livros
-app.get("/books", async (req, res) => {
-    // Consultando todos os documentos na coleção de livros
-    const listBooks = await book.find({});
-    res.status(200).json(listBooks);
-});
-
-// Rota para obter um livro específico com base no ID
 app.get("/books/:id", (req, res) => {
-    // Implementação ausente: Procurar e servir o livro específico solicitado
     const index = searchBook(req.params.id);
     res.status(200).json(books[index]);
 });
