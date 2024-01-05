@@ -11,10 +11,6 @@ books.put("/books/:id", BookController.updateBook);
 books.delete("/books/:id", BookController.deleteBook);
 
 
-
-
-
-
 export default books;
 
 
